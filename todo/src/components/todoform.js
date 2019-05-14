@@ -12,6 +12,7 @@ class ToDoForm extends React.Component {
 
   addTask = event => {
     event.preventDefault();
+    if (!this.state.value) return;
     this.props.newTodo(this.state.value);
     this.setState({
         value: ''

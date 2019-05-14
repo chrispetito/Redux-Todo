@@ -4,12 +4,11 @@ import Todo from "./components/todolist";
 import ToDoForm from "./components/todoform";
 
 class App extends React.Component {
-
   render() {
     return (
       <div className="App">
-        <Todo />
         <ToDoForm />
+        <Todo />
       </div>
     );
   }

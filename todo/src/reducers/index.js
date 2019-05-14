@@ -1,4 +1,4 @@
-import { NEW_TODO, TOGGLE_TASK } from "../actions/index";
+import { NEW_TODO, TOGGLE_TASK, DELETE_TASK } from "../actions/index";
 
 const initialState = {
   title: "this is an example title",
@@ -31,6 +31,11 @@ export const reducer = (state = initialState, action) => {
           return task;
         })
       };
+      case DELETE_TASK:
+      return {
+          ...state,
+          todos: state.todos.filter(task => !task.completed)
+      }
     default:
       return state;
   }

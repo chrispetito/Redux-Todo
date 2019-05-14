@@ -1,5 +1,5 @@
 import React from "react";
-import { newTodo } from "../actions/index";
+import { newTodo, deleteTask } from "../actions/index";
 import { connect } from "react-redux";
 
 class ToDoForm extends React.Component {
@@ -26,6 +26,10 @@ class ToDoForm extends React.Component {
     });
   };
 
+  deleteTask = id => {
+      this.props.deleteTask(id)
+  }
+
   render() {
     // console.log(this.props.todos);
     return (
@@ -37,6 +41,7 @@ class ToDoForm extends React.Component {
           onChange={this.handleChanges}
         />
         <button>Submit</button>
+        <button onClick={this.deleteTask}>Clear</button>
         </form>
       </div>
     );
@@ -52,5 +57,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { newTodo }
+  { newTodo, deleteTask }
 )(ToDoForm);

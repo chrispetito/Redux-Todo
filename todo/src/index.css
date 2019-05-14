@@ -13,10 +13,10 @@ code {
 }
 .todo-incomplete {
   color: green;
-  border: 1px solid red;
+  border: 1px solid green;
 }
 .todo-complete {
-  color: red;
+  color: #c4c4c4;
   text-decoration: line-through;
-  border: 1px solid red;
+  border: 1px solid #c4c4c4;
 }

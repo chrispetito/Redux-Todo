@@ -26,7 +26,7 @@ class ToDoForm extends React.Component {
   };
 
   render() {
-    console.log(this.props.todos);
+    // console.log(this.props.todos);
     return (
       <div>
         <form onSubmit={this.addTask}>
@@ -43,7 +43,7 @@ class ToDoForm extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.todos);
+//   console.log(state.todos);
   return {
     todos: state.todos
   };

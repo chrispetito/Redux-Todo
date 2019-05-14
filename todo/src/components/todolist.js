@@ -17,7 +17,15 @@ class Todo extends React.Component {
     return (
       <div>
         {this.props.todos.map(todo => {
-          return <div onClick={() => this.toggleTask(todo.id)} className={todo.completed ? 'todo-complete' : 'todo-incomplete'} >{todo.value}</div>;
+          return (
+            <div
+              onClick={() => this.toggleTask(todo.id)}
+              className={todo.completed ? "todo-complete" : "todo-incomplete"}
+              key={todo.id}
+            >
+              {todo.value}
+            </div>
+          );
         })}
       </div>
     );
@@ -25,7 +33,7 @@ class Todo extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.todos);
+  // console.log(state.todos);
   return {
     todos: state.todos
   };

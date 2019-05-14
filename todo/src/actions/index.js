@@ -1,4 +1,5 @@
 export const NEW_TODO = 'NEW_TODO'
+export const TOGGLE_TASK = 'TOGGLE_TASK'
 
 export const newTodo = todo => {
     console.log(newTodo)
@@ -8,4 +9,9 @@ export const newTodo = todo => {
     }
 }
 
-export default newTodo; 
+export const toggleTask = id => {
+    return {
+        type: TOGGLE_TASK,
+        payload: id
+    }
+}

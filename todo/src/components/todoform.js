@@ -29,12 +29,14 @@ class ToDoForm extends React.Component {
     console.log(this.props.todos);
     return (
       <div>
+        <form onSubmit={this.addTask}>
         <input
           name="value"
           value={this.state.value}
           onChange={this.handleChanges}
         />
-        <button onClick={this.addTask}>Submit</button>
+        <button>Submit</button>
+        </form>
       </div>
     );
   }

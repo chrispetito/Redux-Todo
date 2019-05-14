@@ -10,8 +10,8 @@ class Todo extends React.Component {
   };
 
   render() {
-    return <div>{this.props.todo.map(todo => {
-        return <div>{todo.value}</div>
+    return <div>{this.props.todos.map((todo, index) => {
+        return <div key={index}>{todo.value}</div>
     })}</div>;
   }
 }
@@ -19,7 +19,7 @@ class Todo extends React.Component {
 const mapStateToProps = state => {
   console.log(state.todos);
   return {
-    todo: state.todos
+    todos: state.todos
   };
 
 };

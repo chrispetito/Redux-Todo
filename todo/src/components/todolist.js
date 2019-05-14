@@ -15,7 +15,7 @@ class Todo extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='task-list'>
         {this.props.todos.map(todo => {
           return (
             <div

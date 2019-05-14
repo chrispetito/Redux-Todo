@@ -15,8 +15,8 @@ class ToDoForm extends React.Component {
     if (!this.state.value) return;
     this.props.newTodo(this.state.value);
     this.setState({
-        value: ''
-    })
+      value: ""
+    });
   };
 
   handleChanges = event => {
@@ -27,29 +27,33 @@ class ToDoForm extends React.Component {
   };
 
   deleteTask = id => {
-      this.props.deleteTask(id)
-  }
+    this.props.deleteTask(id);
+  };
 
   render() {
     // console.log(this.props.todos);
     return (
-      <div>
-        <form onSubmit={this.addTask}>
-        <input
-          name="value"
-          value={this.state.value}
-          onChange={this.handleChanges}
-        />
-        <button>Submit</button>
-        <button onClick={this.deleteTask}>Clear</button>
+      <div className='task-box'>
+        <form className="task-form" onSubmit={this.addTask}>
+          <input
+          placeholder='New Task'
+            className="task-input"
+            name="value"
+            value={this.state.value}
+            onChange={this.handleChanges}
+          />
+
+            <button className='submit-button'>Submit</button>
+            
         </form>
+        <button className='delete-button' onClick={this.deleteTask}>CLEAR COMPLETED</button>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => {
-//   console.log(state.todos);
+  //   console.log(state.todos);
   return {
     todos: state.todos
   };

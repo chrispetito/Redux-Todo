@@ -17,9 +17,9 @@ export const toggleTask = id => {
     }
 }
 
-export const deleteTask = completed => {
+export const deleteTask = id => {
     return {
         type: DELETE_TASK,
-        payload: completed
+        payload: id
     }
 }

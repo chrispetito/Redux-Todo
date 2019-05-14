@@ -17,14 +17,18 @@ code {
   flex-direction: column;
   align-items: center;
   font-size: 62.5%;
+
 }
 .todo-incomplete {
   color: #2c2c2c;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   width: 92%;
   display: flex;
   justify-content: flex-start;
   margin-top: 0.4rem;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .todo-incomplete:hover {
   cursor: pointer;
@@ -33,11 +37,14 @@ code {
   color: #c4c4c4;
   text-decoration: line-through;
   /* border: 1px solid #c4c4c4; */
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   width: 92%;
   display: flex;
   justify-content: flex-end;
   margin-top: 0.4rem;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .todo-complete:hover {
   cursor: pointer;
@@ -48,6 +55,7 @@ code {
   justify-content: center;
   margin-top: 3rem;
   width: 100%;
+  min-width: 800px;
 }
 .task-input {
   height: 2rem;
@@ -58,9 +66,13 @@ code {
   overflow: scroll;
   padding-left: 8px;
 }
+.task-input::placeholder {
+  color: #c4c4c4;
+}
 .task-list {
   /* border: 1px solid red; */
-  width: 50%;
+  width: 51%;
+  min-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,15 +91,17 @@ code {
   align-items: center;
 }
 .delete-button {
-  width: 60%;
+  width: 61%;
   margin-top: 16px;
   height: 1.6rem;
   outline: none;
   background: white;
+  color: #999999;
   border: none;
   font-size: 0.7rem;
   display: flex;
   justify-content: flex-end;
+  font-weight: bold;
 }
 .delete-button:hover {
   cursor: pointer;
